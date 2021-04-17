@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "DotnetTemplate": {
+      "commandName": "Project"
+    }
+  }
+}
