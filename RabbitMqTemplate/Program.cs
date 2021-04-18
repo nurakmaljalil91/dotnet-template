@@ -17,7 +17,8 @@ namespace RabbitMqTemplate
 
             using var channel = connection.CreateModel();
 
-            QueueConsumer.Consume(channel);
+            //DirectExchangePublisher.Publish(channel);
+            DirectExchangeConsumer.Consume(channel);
         }
     }
 }
