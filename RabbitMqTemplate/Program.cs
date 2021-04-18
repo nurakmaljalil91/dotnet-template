@@ -1,8 +1,8 @@
 ﻿using System;
-using DotnetTemplate.Core;
 using RabbitMQ.Client;
+using RabbitMqTemplate.Core;
 
-namespace DotnetTemplate
+namespace RabbitMqTemplate
 {
     public class Program
     {
@@ -17,7 +17,7 @@ namespace DotnetTemplate
 
             using var channel = connection.CreateModel();
 
-            QueueProducer.Publish(channel);
+            QueueConsumer.Consume(channel);
         }
     }
 }
