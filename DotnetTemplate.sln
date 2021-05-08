@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTemplate", "WebApiTem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppTemplate", "ConsoleAppTemplate\ConsoleAppTemplate.csproj", "{895430BD-3130-45C4-BEC0-07894A073686}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqTemplate", "RabbitMqTemplate\RabbitMqTemplate.csproj", "{3034086A-27CE-40BE-A431-65F0081EA871}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqTemplate", "RabbitMqTemplate\RabbitMqTemplate.csproj", "{3034086A-27CE-40BE-A431-65F0081EA871}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketTemplate", "WebSocketTemplate\WebSocketTemplate.csproj", "{195AAAD3-B76E-4831-ABD6-20EE11CDA45B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSocketTemplate", "WebSocketTemplate\WebSocketTemplate.csproj", "{195AAAD3-B76E-4831-ABD6-20EE11CDA45B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTcpServer", "AsyncTcpServer\AsyncTcpServer.csproj", "{A97C72B3-1C35-4695-B20D-9C9136AE6A21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{195AAAD3-B76E-4831-ABD6-20EE11CDA45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{195AAAD3-B76E-4831-ABD6-20EE11CDA45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{195AAAD3-B76E-4831-ABD6-20EE11CDA45B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A97C72B3-1C35-4695-B20D-9C9136AE6A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A97C72B3-1C35-4695-B20D-9C9136AE6A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A97C72B3-1C35-4695-B20D-9C9136AE6A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A97C72B3-1C35-4695-B20D-9C9136AE6A21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
