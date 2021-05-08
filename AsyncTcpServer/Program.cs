@@ -7,7 +7,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-
 namespace AsyncTcpServer
 {
     public class Program
@@ -37,6 +36,7 @@ namespace AsyncTcpServer
                     {
                         services
                             .AddSingleton<IHostedService, Application>();
+                       
 
                     })
                     .UseSerilog()

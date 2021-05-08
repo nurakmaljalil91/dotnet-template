@@ -4,12 +4,16 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+
+
 namespace AsyncTcpServer.Core
 {
     internal sealed class Application : IHostedService
     {
         private readonly ILogger<Application> _log;
         private readonly IHostApplicationLifetime _appLifetime;
+        private readonly global::SocketServerLib.SocketServerLib _server;
+        public bool IsRunning { get; set; }
 
 
         private int? _exitCode; // check if application exit
@@ -21,12 +25,11 @@ namespace AsyncTcpServer.Core
         /// <param name="appLifetime"></param>
         public Application(
             ILogger<Application> log,
-            IHostApplicationLifetime appLifetime
-            )
+            IHostApplicationLifetime appLifetime)
         {
             _log = log;
             _appLifetime = appLifetime;
-
+            _server = new global::SocketServerLib.SocketServerLib();
         }
 
         /// <summary>
@@ -46,12 +49,14 @@ namespace AsyncTcpServer.Core
                     {
                         _log.LogInformation("Hello World!");
 
-                        // Simulate real work is being done
-                        for (var i = 0; i < 1000; i++)
-                        {
-                            Console.WriteLine(i);
-                        }
+                        // Ready to start tcp server here
+                        _log.LogInformation("Starting the TCP Server");
 
+                        IsRunning = true;
+
+                        _server.Listen();
+                        
+                        _log.LogInformation("End of server");
                         await Task.Delay(1000, cancellationToken);
 
                         _exitCode = 0;
