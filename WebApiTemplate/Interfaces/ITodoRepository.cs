@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using WebApiTemplate.Models;
 
-namespace WebApiTemplate.Services
+namespace WebApiTemplate.Interfaces
 {
     public interface ITodoRepository
     {

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mime;
 using System.Threading.Tasks;
+using WebApiTemplate.Interfaces;
 using WebApiTemplate.Models;
 using WebApiTemplate.Services;
 

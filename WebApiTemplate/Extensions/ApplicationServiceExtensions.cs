@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebApiTemplate.Interfaces;
 using WebApiTemplate.Services;
 
 namespace WebApiTemplate.Extensions

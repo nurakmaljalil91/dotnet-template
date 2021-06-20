@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Common;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using WebApiTemplate.Interfaces;
 using WebApiTemplate.Models;
 
 namespace WebApiTemplate.Services
@@ -127,7 +128,9 @@ namespace WebApiTemplate.Services
 
                 var respond = new Response()
                 {
+                    Code = "200",
                     Message = $"Success create new todo with id {id}",
+                    Details = string.Empty,
                     CreateTime = DateTime.Now
                 };
 
@@ -186,6 +189,8 @@ namespace WebApiTemplate.Services
                     }
                 }
 
+                respond.Code = "200";
+                respond.Details = string.Empty;
                 respond.CreateTime = DateTime.Now;
 
                 return respond;
@@ -237,6 +242,8 @@ namespace WebApiTemplate.Services
 
                 }
 
+                respond.Code = "200";
+                respond.Details = string.Empty;
                 respond.CreateTime = DateTime.Now;
 
                 return respond;
