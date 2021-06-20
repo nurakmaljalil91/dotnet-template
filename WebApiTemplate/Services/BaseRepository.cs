@@ -10,19 +10,19 @@ namespace WebApiTemplate.Services
     /// Act as base class for all the service that use Postgresql database.
     /// Open and close connection 
     /// </summary>
-    public class PgBaseRepository
+    public class BaseRepository
     {
         private readonly DbConnection _connection;
-        private readonly ILogger<PgBaseRepository> _logger;
+        private readonly ILogger<BaseRepository> _logger;
 
         /// <summary>
         /// ctor
         /// </summary>
         /// <param name="connection"></param>
         /// <param name="logger"></param>
-        public PgBaseRepository(
+        public BaseRepository(
             DbConnection connection, 
-            ILogger<PgBaseRepository> logger)
+            ILogger<BaseRepository> logger)
         {
             _connection = connection;
             _logger = logger;

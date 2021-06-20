@@ -23,7 +23,7 @@ namespace WebApiTemplate
 
             try
             {
-                Log.Information("Program Starting Up");
+                Log.Information("Web API ASP NET Core 3.1 Starting Up");
 
                 CreateHostBuilder(args).Build().Run();
             }

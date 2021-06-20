@@ -8,7 +8,7 @@ using WebApiTemplate.Models;
 
 namespace WebApiTemplate.Services
 {
-    public class TodoRepository : PgBaseRepository,  ITodoRepository
+    public class TodoRepository : BaseRepository,  ITodoRepository
     {
         /// <summary>
         /// ctor

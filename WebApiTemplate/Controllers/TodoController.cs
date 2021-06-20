@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Collections;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mime;
 using System.Threading.Tasks;
@@ -7,10 +8,7 @@ using WebApiTemplate.Services;
 
 namespace WebApiTemplate.Controllers
 {
-    [ApiVersion("1")]
-    [Route("api/v{v:apiVersion}/[controller]")]
-    [ApiController]
-    public class TodoController : ControllerBase
+    public class TodoController : BaseApiController
     {
         private readonly ITodoRepository _todoRepository;
 
@@ -19,7 +17,9 @@ namespace WebApiTemplate.Controllers
             _todoRepository = todoRepository;
         }
 
-        [HttpGet()]
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> GetTodo([FromQuery] string id)
         {
 
