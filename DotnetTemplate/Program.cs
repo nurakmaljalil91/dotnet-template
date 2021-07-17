@@ -8,18 +8,18 @@ namespace DotnetTemplate
     {
         public static void Main(string[] args)
         {
-            //var factory = new ConnectionFactory
-            //{
-            //    Uri = new Uri("amqp://user:bitnami@192.168.235.129:5672")
-            //};
+            var factory = new ConnectionFactory
+            {
+                Uri = new Uri("amqp://user:bitnami@192.168.235.128:5672")
+            };
 
-            //using var connection = factory.CreateConnection();
+            using var connection = factory.CreateConnection();
 
-            //using var channel = connection.CreateModel();
+            using var channel = connection.CreateModel();
 
-            //DirectExchangePublisher.Publish(channel);
+            DirectExchangePublisher.Publish(channel);
 
-            var simpleDate = new {Timestamp = "2021-04-25"};
+            //var simpleDate = new {Timestamp = "2021-04-25"};
         }
     }
 }

@@ -10,7 +10,7 @@ namespace RabbitMqTemplate
         {
             var factory = new ConnectionFactory
             {
-                Uri = new Uri("amqp://user:bitnami@192.168.235.129:5672")
+                Uri = new Uri("amqp://user:bitnami@192.168.235.128:5672")
             };
 
             using var connection = factory.CreateConnection();
@@ -19,6 +19,7 @@ namespace RabbitMqTemplate
 
             //DirectExchangePublisher.Publish(channel);
             DirectExchangeConsumer.Consume(channel);
+            //GlobalIndexConsumer.Consume(channel);
         }
     }
 }
